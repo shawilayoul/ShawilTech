@@ -1,0 +1,142 @@
+<div class="portfolio-page">
+  <header class="portfolio-header">
+    <div class="container">
+      <h1 class="portfolio-title">My <span class="highlight">Portfolio</span></h1>
+      <p class="portfolio-subtitle">A curated collection of my best work and the impact it created for clients</p>
+      <div class="portfolio-filter">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="design">UI/UX Design</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="projects">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-card" *ngFor="let project of projects" [class]="'project-card ' + project.category">
+          <div class="project-image-container">
+            <img [src]="project.image" [alt]="project.title" class="project-image">
+            <div class="project-overlay">
+              <a [href]="project.liveUrl" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a [href]="project.caseStudyUrl" class="project-link">
+                <i class="fas fa-book-open"></i> Case Study
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">{{project.categoryLabel}}</span>
+              <span class="project-date">{{project.date}}</span>
+            </div>
+            <h3 class="project-title">{{project.title}}</h3>
+            <p class="project-description">{{project.description}}</p>
+            <div class="project-tech">
+              <span *ngFor="let tech of project.technologies" class="tech-badge">{{tech}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-studies">
+    <div class="container">
+      <h2 class="section-title">Transformation <span class="highlight">Case Studies</span></h2>
+      <p class="section-subtitle">See the measurable impact of my work through before & after comparisons</p>
+      
+      <div class="case-study-slider">
+        <div class="case-study" *ngFor="let study of caseStudies">
+          <div class="case-before">
+            <h3>Before</h3>
+            <div class="case-image-container">
+              <img [src]="study.beforeImage" alt="Before redesign">
+              <div class="case-stats">
+                <div class="stat-item">
+                  <span class="stat-value">{{study.statsBefore.visitors}}</span>
+                  <span class="stat-label">Monthly Visitors</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">{{study.statsBefore.conversion}}</span>
+                  <span class="stat-label">Conversion Rate</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">{{study.statsBefore.loadTime}}</span>
+                  <span class="stat-label">Load Time (s)</span>
+                </div>
+              </div>
+            </div>
+            <p class="case-description">{{study.beforeDescription}}</p>
+          </div>
+          
+          <div class="case-after">
+            <h3>After</h3>
+            <div class="case-image-container">
+              <img [src]="study.afterImage" alt="After redesign">
+              <div class="case-stats positive">
+                <div class="stat-item">
+                  <span class="stat-value">{{study.statsAfter.visitors}}</span>
+                  <span class="stat-label">Monthly Visitors</span>
+                  <span class="stat-change">+{{study.improvement.visitors}}%</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">{{study.statsAfter.conversion}}</span>
+                  <span class="stat-label">Conversion Rate</span>
+                  <span class="stat-change">+{{study.improvement.conversion}}%</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">{{study.statsAfter.loadTime}}</span>
+                  <span class="stat-label">Load Time (s)</span>
+                  <span class="stat-change">-{{study.improvement.loadTime}}%</span>
+                </div>
+              </div>
+            </div>
+            <p class="case-description">{{study.afterDescription}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Client <span class="highlight">Testimonials</span></h2>
+      <p class="section-subtitle">Don't just take my word for it - hear from my clients</p>
+      
+      <div class="testimonial-grid">
+        <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+          <div class="testimonial-content">
+            <div class="testimonial-quote">
+              <i class="fas fa-quote-left"></i>
+              <p>{{testimonial.quote}}</p>
+            </div>
+            <div class="testimonial-author">
+              <img [src]="testimonial.avatar" [alt]="testimonial.name" class="author-avatar">
+              <div class="author-info">
+                <h4>{{testimonial.name}}</h4>
+                <p>{{testimonial.position}}, {{testimonial.company}}</p>
+                <div class="author-rating">
+                  <i class="fas fa-star" *ngFor="let star of [1,2,3,4,5]"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-cta">
+    <div class="container">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's discuss how I can help bring your vision to life with a custom digital solution.</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="cta-button primary">Get a Free Quote</a>
+        <a routerLink="/services" class="cta-button secondary">View Services</a>
+      </div>
+    </div>
+  </section>
+</div>

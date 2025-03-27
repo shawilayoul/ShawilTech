@@ -1,0 +1,38 @@
+<div class="pricing-container">
+  <h2 class="pricing-title">Our Pricing Plans</h2>
+  <p class="pricing-subtitle">Choose the perfect plan for your project needs</p>
+  
+  <div class="pricing-options">
+    <div *ngFor="let option of pricingOptions" 
+         class="pricing-card" 
+         [class.featured]="option.featured">
+      <div class="card-header">
+        <h3>{{ option.plan }}</h3>
+        <div class="price-container">
+          <span class="price">{{ option.price }}</span>
+          <span class="period">/{{ option.period }}</span>
+        </div>
+        <p class="description">{{ option.description }}</p>
+      </div>
+      
+      <ul class="features-list">
+        <li *ngFor="let feature of option.features" 
+            [class.included]="feature.included"
+            [class.excluded]="!feature.included">
+          <span class="feature-icon">
+            {{ feature.included ? '✓' : '✗' }}
+          </span>
+          {{ feature.text }}
+        </li>
+      </ul>
+      
+      <button class="cta-button" [class.featured]="option.featured">
+        {{ option.ctaText || 'Get Started' }}
+      </button>
+      
+      <div *ngIf="option.featured" class="popular-badge">Most Popular</div>
+    </div>
+  </div>
+  
+  <p class="pricing-note">Custom solutions available for unique requirements</p>
+</div>

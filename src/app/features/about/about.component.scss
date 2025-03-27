@@ -1,0 +1,242 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #3498db;
+$accent-color: #4cc9f0;
+$light-color: #f8f9fa;
+$dark-color: #212529;
+$text-color: #333;
+$border-radius: 8px;
+$box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+.about-page {
+  font-family: 'Poppins', sans-serif;
+  color: $text-color;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-header {
+  text-align: center;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba($primary-color, 0.1) 0%, rgba($accent-color, 0.1) 100%);
+  border-radius: 0 0 $border-radius $border-radius;
+  margin-bottom: 3rem;
+
+  .header-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    
+    .highlight {
+      color: $primary-color;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: lighten($text-color, 20%);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+
+  .header-illustration {
+    max-width: 400px;
+    margin: 2rem auto 0;
+    
+    img {
+      width: 100%;
+      height: auto;
+      opacity: 0.9;
+    }
+  }
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+.about-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  transition: $transition;
+  position: relative;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  &.featured {
+    border-top: 4px solid $primary-color;
+  }
+
+  .section-icon {
+    font-size: 2rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: $dark-color;
+    position: relative;
+    padding-bottom: 0.5rem;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: $primary-color;
+      border-radius: 3px;
+    }
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    color: lighten($text-color, 10%);
+  }
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+
+  .skill-tag {
+    background: rgba($primary-color, 0.1);
+    color: $primary-color;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+}
+
+.value-props {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+
+  .value-prop {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba($primary-color, 0.05);
+    border-radius: $border-radius;
+    transition: $transition;
+
+    &:hover {
+      background: rgba($primary-color, 0.1);
+      transform: translateY(-3px);
+    }
+
+    i {
+      font-size: 2rem;
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      margin-bottom: 0.5rem;
+      color: $dark-color;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+      color: lighten($text-color, 20%);
+    }
+  }
+}
+
+.certifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+
+  li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    i {
+      margin-right: 1rem;
+      color: $primary-color;
+      font-size: 1.1rem;
+      width: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.cta-button {
+  background: $primary-color;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: $border-radius;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $transition;
+  display: inline-block;
+  margin-top: 1rem;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+    transform: translateY(-2px);
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .about-header {
+    padding: 3rem 0;
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .about-section {
+    padding: 1.5rem;
+  }
+
+  .value-props {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+}

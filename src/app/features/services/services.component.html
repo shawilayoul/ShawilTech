@@ -1,0 +1,42 @@
+<div class="services-page">
+  <header class="services-header">
+    <div class="container">
+      <h1 class="services-title">My <span class="highlight">Services</span></h1>
+      <p class="services-subtitle">Comprehensive digital solutions tailored to elevate your online presence and drive business growth.</p>
+      <div class="header-decoration">
+        <div class="decoration-line"></div>
+        <div class="decoration-dot"></div>
+        <div class="decoration-line"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="services-list">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-card" *ngFor="let service of services">
+          <div class="service-icon">
+            <i [class]="service.icon"></i>
+          </div>
+          <h3 class="service-title">{{service.title}}</h3>
+          <p class="service-description">{{service.description}}</p>
+          <ul class="service-features">
+            <li *ngFor="let feature of service.features">{{feature}}</li>
+          </ul>
+          <a routerLink="/contact" class="service-cta">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-cta">
+    <div class="container">
+      <h2>Ready to Transform Your Online Presence?</h2>
+      <p>Let's discuss how I can help you achieve your business goals through custom digital solutions.</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="cta-button primary">Get a Free Consultation</a>
+        <a routerLink="/portfolio" class="cta-button secondary">View My Work</a>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,86 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-headline">I Build Modern & Scalable Websites for Businesses</h1>
+      <p class="hero-subtitle">Full-Stack Developer creating fast, responsive, and user-friendly web experiences that drive results</p>
+      <div class="cta-buttons">
+        <button class="primary-cta" (click)="scrollToContact()">Get a Free Quote</button>
+        <button class="secondary-cta" (click)="scrollToPortfolio()">View My Work</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://cdn.pixabay.com/photo/2019/10/09/07/28/development-4536630_640.png" alt="Web Developer Illustration">
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <h2 class="section-title">How I Can Help You</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3>Custom Web Development</h3>
+        <p>Tailored solutions built with Angular, React, or Vue.js to meet your specific business needs.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>Mobile-First Design</h3>
+        <p>Responsive websites that look and perform beautifully on all devices.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3>Performance Optimization</h3>
+        <p>Lightning-fast load times and smooth user experiences that keep visitors engaged.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Preview -->
+  <section class="portfolio-section" id="portfolio">
+    <h2 class="section-title">Recent Projects</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item" *ngFor="let project of featuredProjects">
+        <img [src]="project.image" [alt]="project.title">
+        <div class="portfolio-overlay">
+          <h3>{{ project.title }}</h3>
+          <button class="view-project" (click)="openProject(project)">View Project</button>
+        </div>
+      </div>
+    </div>
+    <button class="view-all" routerLink="/portfolio">View All Projects</button>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <h2 class="section-title">What Clients Say</h2>
+    <div class="testimonials-slider">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <div class="client-info">
+          <img [src]="testimonial.avatar" [alt]="testimonial.name">
+          <div>
+            <h4>{{ testimonial.name }}</h4>
+            <p class="client-title">{{ testimonial.position }}</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"{{ testimonial.text }}"</p>
+        <div class="rating">
+          <i class="fas fa-star" *ngFor="let star of [1,2,3,4,5]"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="contact">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Let's discuss how I can help bring your ideas to life</p>
+    <button class="primary-cta" (click)="openContactForm()">Work With Me</button>
+  </section>
+</div>
