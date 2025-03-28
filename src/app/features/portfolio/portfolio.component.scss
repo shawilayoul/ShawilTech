@@ -2,10 +2,10 @@
 $primary-color: #3498db;
 $secondary-color: #2ecc71;
 .portfolio-page {
-  padding-top: 6rem;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 2rem;
   background-color: #f8f9fa;
   color: #2c3e50;
-
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -432,7 +432,7 @@ $secondary-color: #2ecc71;
   text-align: center;
   padding: 4rem 0;
   background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   color: white;
 
   h2 {

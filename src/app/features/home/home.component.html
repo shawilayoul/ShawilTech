@@ -83,4 +83,23 @@
     <p>Let's discuss how I can help bring your ideas to life</p>
     <button class="primary-cta" (click)="openContactForm()">Work With Me</button>
   </section>
+  <!-- Contact Form Modal -->
+<div class="modal-overlay" *ngIf="isContactFormOpen">
+  <div class="modal">
+    <h2>Contact Me</h2>
+    <form (submit)="submitContactForm($event)">
+      <label>Name:</label>
+      <input type="text" placeholder="Your Name" required>
+      
+      <label>Email:</label>
+      <input type="email" placeholder="Your Email" required>
+
+      <label>Message:</label>
+      <textarea placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+      <button type="button" (click)="closeContactForm()">Close</button>
+    </form>
+  </div>
+</div>
 </div>
