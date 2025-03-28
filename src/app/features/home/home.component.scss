@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 // Variables
@@ -40,7 +39,7 @@ $light-gray: #f8f9fa;
     .hero-subtitle {
       font-size: 1.2rem;
       margin-bottom: 2rem;
-      color: lighten($text-color, 20%);
+      color: $text-color;
     }
 
     .cta-buttons {
@@ -61,7 +60,7 @@ $light-gray: #f8f9fa;
         border: none;
 
         &:hover {
-          background: darken($primary-color, 10%);
+          background: $primary-color;
           transform: translateY(-2px);
         }
       }
@@ -145,7 +144,7 @@ $light-gray: #f8f9fa;
     }
 
     p {
-      color: lighten($text-color, 20%);
+      color: $text-color;
       line-height: 1.6;
     }
   }
@@ -244,7 +243,7 @@ $light-gray: #f8f9fa;
     transition: all 0.3s ease;
 
     &:hover {
-      background: darken($primary-color, 10%);
+      background: $primary-color;
       transform: translateY(-2px);
     }
   }
@@ -294,7 +293,7 @@ $light-gray: #f8f9fa;
 
       .client-title {
         margin: 0;
-        color: lighten($text-color, 30%);
+        color: $text-color;
         font-size: 0.9rem;
       }
     }

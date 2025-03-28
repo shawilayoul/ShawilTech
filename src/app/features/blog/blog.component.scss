@@ -10,7 +10,6 @@ $box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $transition: all 0.3s ease;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 .blog-page {
@@ -47,8 +46,8 @@ $transition: all 0.3s ease;
 
   .subtitle {
     font-size: 1.2rem;
-    color: lighten($text-color, 20%);
-    max-width: 600px;
+    color: $text-color;
+     max-width: 600px;
     margin: 0 auto 2rem;
   }
 
@@ -171,7 +170,7 @@ $transition: all 0.3s ease;
       transition: $transition;
 
       &:hover {
-        background: darken($primary-color, 10%);
+        background: $primary-color;
       }
     }
   }
@@ -204,7 +203,7 @@ $transition: all 0.3s ease;
     gap: 1rem;
     padding: 1rem 1.5rem 0;
     font-size: 0.85rem;
-    color: lighten($text-color, 20%);
+    color: $text-color;
 
     .post-category {
       color: $primary-color;
@@ -237,7 +236,7 @@ $transition: all 0.3s ease;
     }
 
     .post-excerpt {
-      color: lighten($text-color, 15%);
+      color: $text-color;
       margin-bottom: 1.5rem;
     }
   }
@@ -264,7 +263,7 @@ $transition: all 0.3s ease;
       }
 
       &:hover {
-        color: darken($primary-color, 10%);
+        color: $primary-color;
 
         i {
           transform: translateX(3px);

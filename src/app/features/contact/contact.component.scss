@@ -10,7 +10,6 @@ $box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $transition: all 0.3s ease;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 .contact-page {
@@ -47,7 +46,7 @@ $transition: all 0.3s ease;
 
   .subtitle {
     font-size: 1.2rem;
-    color: lighten($text-color, 20%);
+    color: $text-color;
     max-width: 600px;
     margin: 0 auto 2rem;
   }
@@ -95,8 +94,8 @@ $transition: all 0.3s ease;
   }
 
   .section-description {
-    color: lighten($text-color, 20%);
-    font-size: 0.95rem;
+    color: $text-color;
+        font-size: 0.95rem;
   }
 }
 
@@ -132,8 +131,8 @@ $transition: all 0.3s ease;
       top: 50%;
       transform: translateY(-50%);
       
-      color: lighten($text-color, 40%);
-      font-size: 1.1rem;
+      color: $text-color;
+            font-size: 1.1rem;
     }
   }
 
@@ -180,7 +179,7 @@ $transition: all 0.3s ease;
   }
 
   &:hover {
-    background: darken($primary-color, 10%);
+    background: $primary-color;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba($primary-color, 0.2);
   }
@@ -239,14 +238,14 @@ $transition: all 0.3s ease;
       transition: $transition;
 
       &:hover {
-        color: darken($primary-color, 10%);
+        color: $primary-color;
         text-decoration: underline;
       }
     }
 
     .response-time {
       font-size: 0.85rem;
-      color: lighten($text-color, 30%);
+      color: $text-color;
       margin: 0;
     }
   }
