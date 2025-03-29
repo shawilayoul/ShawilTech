@@ -86,6 +86,9 @@ $light-gray: #f8f9fa;
       height: auto;
       animation: float 6s ease-in-out infinite;
     }
+    .hero-image-text{
+       text-decoration-line: none;
+    }
   }
 }
 
@@ -460,11 +463,10 @@ $light-gray: #f8f9fa;
     flex-direction: column;
     text-align: center;
     padding: 3rem 1rem;
-
+  
     .hero-content {
       text-align: center;
       margin-bottom: 2rem;
-
       .cta-buttons {
         justify-content: center;
       }
@@ -483,7 +485,7 @@ $light-gray: #f8f9fa;
 @media (max-width: 480px) {
   .hero-section {
     .hero-headline {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     .hero-subtitle {

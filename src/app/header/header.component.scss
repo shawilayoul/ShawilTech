@@ -115,6 +115,11 @@
   @media (max-width: 768px) {
     padding: 1rem 5%;
 
+    .logo {
+      a {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }}
     .hamburger {
       display: block;
     }
